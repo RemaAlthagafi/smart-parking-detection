@@ -1,67 +1,38 @@
-# Smart Parking Detection with Proximity Recommendations
+Smart Parking Detection with Pathfinding Optimization 
+An advanced computer vision system designed to detect parking occupancy and provide intelligent navigation to the nearest available spot using deep learning and pathfinding algorithms.
 
-A computer vision project that aims to detect available parking spaces and recommend the nearest vacant spot based on proximity and path planning.
 
-## Status
-**Work in Progress**  
-This project is currently under development. The repository includes the project planning and will be updated with implementation, experiments, and final documentation.
+Project Overview
+This project addresses urban parking challenges by automating the detection of vacant spaces and calculating the most efficient route for the user. By leveraging YOLOv8 and the A* algorithm, the system provides a robust solution for modern smart-city infrastructure.
 
-## Project Overview
-This project focuses on building an intelligent parking assistance system that detects vacant and occupied parking spaces from parking lot images, then recommends the nearest available parking space to the user.
+Objectives
+Automated Detection: Identify parking spaces and classify occupancy in complex environments.
 
-The proposed system combines computer vision techniques with pathfinding algorithms to support smart parking guidance in a practical and scalable way.
+High Precision: Ensure reliable detection under varying lighting and shadows without manual pre-processing.
 
-## Objectives
-- Detect parking spaces from images or video data
-- Classify each parking space as **occupied** or **available**
-- Recommend the **nearest vacant parking spot**
-- Compute the shortest route to the selected parking space
-- Provide a clear and efficient parking guidance workflow
+Intelligent Recommendation: Locate the nearest vacant spot based on the user's entry point.
 
-## Proposed Workflow
-The planned system follows these main stages:
-1. Dataset collection and preparation
-2. Data cleaning and preprocessing
-3. Parking space detection
-4. Occupancy classification
-5. Nearest parking space selection
-6. Shortest-path recommendation
-7. Result visualization through a user interface
+Route Optimization: Compute the shortest path to the recommended space.
 
-## Planned Methods
-The project proposal includes the following methods and algorithms:
-- **HOG** for feature extraction
-- **SVM** and **K-NN** for parking space classification
-- **A\*** and **Dijkstra** for nearest parking recommendation and shortest path planning
+System Workflow
+Inference: Processing parking lot images through the YOLOv8 Nano model.
 
-## Dataset
-The project is planned to use a pre-processed version of the **PKLot** dataset, which contains parking lot images captured under different weather and lighting conditions.
+Occupancy Mapping: Generating a real-time grid of available vs. occupied slots.
 
-## Evaluation Metrics
-The system is planned to be evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-- Recommendation Accuracy
-- Response Time
+Pathfinding: Applying the A* algorithm to determine the optimal route.
 
-## Repository Contents
-This repository will be updated gradually to include:
-- Project proposal and planning documents
-- Source code implementation
-- Model training and evaluation
-- Experimental results
-- Final report and documentation
+Visualization: Displaying the final recommendation and calculated path.
 
-## Future Work
-The next development stages include:
-- Implementing the detection and classification pipeline
-- Comparing classification performance between models
-- Integrating pathfinding for nearest parking recommendation
-- Building a simple interface to display results
-- Finalizing the complete system and report
+Core Technologies & Methodology
+Architecture: YOLOv8 (Nano) selected for its superior balance between accuracy and resource efficiency.
 
-## Notes
-This project is being developed as part of a university computer vision course and is currently under active progress.
+Pathfinding: A* Algorithm for efficient, cost-based navigation.
+
+Development Environment: Developed and trained using PyTorch.
+
+Dataset
+The system was trained and validated on a comprehensive dataset (derived from PKLot). The data covers diverse weather conditions and angles to ensure the model's robustness in real-world scenarios.
+
+
+Key Learning & Evolution
+Initially, traditional methods like HOG and SVM were considered. However, the project evolved to Deep Learning (YOLOv8) to overcome limitations in environmental adaptability and achieve the high precision required for professional deployment.
